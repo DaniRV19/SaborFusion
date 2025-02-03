@@ -1,0 +1,21 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: #007bff;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 1.5rem; /* Separación entre título y contenido */
+}
+.map-container, .social-container {
+    text-align: center;
+}

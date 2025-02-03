@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaborFusion - Contacto</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <!-- Usando la versión más reciente de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../SaborFusion/css/styles.css">
+    <link rel="stylesheet" href="../SaborFusion/css/social.css">
 </head>
 <body>
     <header class="bg-dark text-white text-center py-3">
@@ -13,7 +16,7 @@
         <nav>
             <ul class="nav justify-content-center">
                 <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="aboutUs.html">Sobre Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="aboutMe.html">Sobre Nosotros</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="catalog.html">Catálogo</a></li>
                 <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contacto</a></li>
             </ul>
@@ -21,9 +24,9 @@
     </header>
     <main class="container mt-4">
         <section>
-            <h2>Contáctame</h2>
-            <p>Si tienes preguntas o comentarios, no dudes en escribirme. Estoy aquí para ayudarte.</p>
-            <form action="index.html" method="get">
+            <h2 class="section-title">Contáctame</h2>
+            <p class="text-center">Si tienes preguntas o comentarios, no dudes en escribirme. Estoy aquí para ayudarte.</p>
+            <form action="index.html" method="get" class="mx-auto" style="max-width: 600px;">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <input type="text" class="form-control" id="name" name="name" required>
@@ -41,10 +44,22 @@
         </section>
 
         <section class="mt-5">
-            <h3>Información de Contacto</h3>
-            <p><strong>Email:</strong> saborfusion@gmail.com</p>
-            <p><strong>Teléfono:</strong> +34 123 456 789</p>
-            <p><strong>Dirección:</strong> Calle de la Comida, 123, Sevilla, España</p>
+            <h3 class="section-title">Ubicación</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.8220791120796!2d-5.984930749999999!3d37.38476427948939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126d0d05b56835!2sNervi%C3%B3n%20Plaza!5e0!3m2!1ses!2ses!4v1706972023150" width="80%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section class="mt-5">
+            <h3 class="section-title">Síguenos en Redes Sociales</h3>
+            <div class="social-container">
+                <div class="social-icons">
+                    <a href="#" class="mx-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="mx-2"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="text-center py-3 bg-dark text-white">
@@ -52,4 +67,3 @@
     </footer>
 </body>
 </html>
-
