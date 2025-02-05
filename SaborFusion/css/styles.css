@@ -77,3 +77,10 @@ footer {
     height: 300px; /* Alto fijo */
     object-fit: cover; /* Ajusta la imagen sin distorsionarla */
 }
+
+
+.imagen-centro {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
