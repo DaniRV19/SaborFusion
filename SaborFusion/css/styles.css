@@ -1,17 +1,24 @@
+/* General Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #35424a;
+    background-color: #2C3E50;
     color: #ffffff;
 }
 
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', sans-serif;
+    color: #3498DB;
+}
+
 header {
-    background: #35424a;
+    background: #2C3E50;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 nav ul {
@@ -21,21 +28,26 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
 }
 
 main {
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #ffffff;
-    color: #35424a;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #2C3E50;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2, h3 {
@@ -47,40 +59,155 @@ button, .btn-primary {
     background-color: #3498DB;
     border: none;
     color: white;
-    padding: 10px 20px;
-    text-transform: uppercase;
+    padding: 12px 25px;
     font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    text-transform: uppercase;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
 
 button:hover, .btn-primary:hover {
-    background-color: #2C3E50;
+    background-color: #2980B9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #35424a;
+    padding: 20px 0;
+    background: #2C3E50;
     color: #ffffff;
     position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
-
-
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
 
 .card-img-top {
-    width: 300px; /* Ancho fijo */
-    height: 300px; /* Alto fijo */
-    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    width: 250px; /* Asegúrate de que sea un tamaño cuadrado */
+    height: 250px; /* Asegúrate de que tenga la misma altura que el ancho */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente sin deformarse */
+    border-radius: 50%; /* Esto hará que la imagen sea redonda */
+    margin: 0 auto; /* Centra la imagen */
 }
 
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
 
 .imagen-centro {
     display: block;
     margin: 0 auto;
     text-align: center;
+}
+
+/* Benefit Section */
+.benefits-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.benefit {
+    background: #3498DB;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.benefit i {
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Contact Button */
+.login-btn {
+    background-color: #3498DB;
+    border: none;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #2980B9;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.parallax-section {
+    background: url('../img/SaborFusion_logo.png') no-repeat center center;
+    background-size: contain;
+    background-attachment: fixed;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

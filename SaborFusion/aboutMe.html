@@ -6,10 +6,11 @@
     <title>SaborFusion - Sobre Nosotros</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>Sobre SaborFusion</h1>
+    <header class="bg-dark text-white text-center py-4">
+        <h1 class="display-4">Sobre SaborFusion</h1>
         <nav>
             <ul class="nav justify-content-center">
                 <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
@@ -19,30 +20,59 @@
             </ul>
         </nav>
     </header>
-    <main class="container mt-4">
-        <section>
-            <h2>Nuestra Historia</h2>
-            <p>En SaborFusion, creemos que la comida deliciosa debe ser accesible y fácil de preparar. Fundada en 2025, nuestra misión es ofrecer productos que transformen la experiencia culinaria en algo simple y placentero.</p>
+    
+    <main class="container mt-5">
+        <section class="text-center">
+            <h2 class="display-4">Nuestra Historia</h2>
+            <p class="lead">En SaborFusion, convertimos lo imposible en realidad: comidas deliciosas y listas en segundos. Desde 2025, reinventamos la forma de disfrutar la gastronomía con ingredientes naturales y tecnología innovadora.</p>
         </section>
 
-        <section class="mt-5">
-            <h3>Compromiso</h3>
-            <p>Nos comprometemos a utilizar ingredientes naturales y de alta calidad en todos nuestros productos. Cada sobre está diseñado para ofrecer una experiencia de sabor excepcional, sin complicaciones.</p>
+        <section class="benefits-container mt-5 text-center">
+            <div class="benefit fade-in">
+                <i class="fas fa-seedling"></i>
+                <h4>Ingredientes Naturales</h4>
+                <p>Seleccionamos lo mejor de la naturaleza para ti.</p>
+            </div>
+            <div class="benefit fade-in">
+                <i class="fas fa-heart"></i>
+                <h4>Pasión por el Sabor</h4>
+                <p>Recetas diseñadas para deleitar cada bocado.</p>
+            </div>
+            <div class="benefit fade-in">
+                <i class="fas fa-globe"></i>
+                <h4>Sostenibilidad</h4>
+                <p>Usamos envases ecológicos exclusivos y perosnalizados.</p>
+            </div>
         </section>
 
-        <section class="mt-5">
-            <h3>Conóceme</h3>
-            <div class="card mb-4">
-                <img src="../img/fotoDani.jpg" class="card-img-top" alt="Mi Foto">
+        <section class="mt-5 text-center">
+            <h3>Conoce al Fundador</h3>
+            <div class="card mx-auto shadow-lg" style="width: 22rem; border-radius: 15px;">
+                <img src="../img/fotoDani.jpg" class="card-img-top rounded-circle p-3" alt="Daniel Rodríguez Vázquez">
                 <div class="card-body">
                     <h5 class="card-title">Daniel Rodríguez Vázquez</h5>
-                    <p class="card-text">Fundador y Chef Principal de SaborFusion. Apasionado por la cocina y por ofrecer soluciones prácticas para disfrutar de comidas deliciosas.</p>
+                    <p class="card-text">Fundador y Chef Principal de SaborFusion. Un innovador gastronómico que ha revolucionado la industria con soluciones prácticas y deliciosas.</p>
+                    <a href="contact.html" class="btn btn-primary login-btn">Contáctame</a>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="text-center py-3 bg-dark text-white">
+
+    <footer class="text-center py-4 bg-dark text-white mt-5">
         <p>&copy; 2025 SaborFusion. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Animación de desvanecimiento para los textos al hacer scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(function(element) {
+                const position = element.getBoundingClientRect().top;
+                if (position < window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
