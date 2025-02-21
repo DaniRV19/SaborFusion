@@ -1,0 +1,73 @@
+body {
+    background-color: #35424a;
+    color: #2C3E50;
+}
+header {
+    background: linear-gradient(90deg, #35424a, #2C3E50);
+}
+.nav-link {
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #f0efee !important;
+}
+.benefits-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.benefit {
+    background: #2C3E50;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.benefit:hover {
+    transform: scale(1.1);
+    background: #35424a;
+    color: white;
+}
+.btn-primary {
+    background: #3498DB;
+    border: none;
+}
+.btn-primary:hover {
+    background: #2C3E50;
+}
+footer {
+    background: #2C3E50;
+}
+
+.parallax-section {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Ocupa toda la pantalla */
+    background: url('../img/SaborFusion_logo.png') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco para que el texto resalte */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

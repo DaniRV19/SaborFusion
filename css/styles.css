@@ -73,17 +73,48 @@ button:hover, .btn-primary:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #2C3E50;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+/*Estilos footer*/
+.footer {
+    background-color: #222; /* Fondo oscuro elegante */
+    color: #fff;
+    font-size: 14px;
 }
 
+.footer h5 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #bbb;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #8BC34A; /* Verde Lima de tu guía de estilos */
+}
+
+.footer a i {
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover i {
+    color: #8BC34A;
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+
+/*Estilos cards*/
 .card {
     border-radius: 20px;
     overflow: hidden;
@@ -109,6 +140,13 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
+
+.contenedor-imagen {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Evita barras de desplazamiento */
+}
+
 
 /* Benefit Section */
 .benefits-container {
@@ -183,23 +221,24 @@ h4 {
 }
 
 .parallax-section {
-    background: url('../img/SaborFusion_logo.png') no-repeat center center;
-    background-size: contain;
-    background-attachment: fixed;
-    height: 300px;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    background: url('../img/SaborFusion_logo.png') center/cover no-repeat fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     text-align: center;
     color: white;
+    padding: 50px 20px;
 }
 
 .overlay {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 30px;
+    background: rgba(0, 0, 0, 0.5); /* Oscurece un poco para que el texto resalte */
+    padding: 20px;
     border-radius: 10px;
 }
+
 
 .fade-in {
     opacity: 0;
