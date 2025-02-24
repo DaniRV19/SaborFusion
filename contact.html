@@ -11,15 +11,32 @@
     <link rel="stylesheet" href="../css/social.css">
 </head>
 <body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>Bienvenido a SaborFusion</h1>
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="aboutMe.html">Sobre Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="catalog.html">Catálogo</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contacto</a></li>
-            </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+            <a class="navbar-brand" href="index.html">SaborFusion</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="catalog.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contacto</a>
+                    </li>
+                    <li class="nav-item ml-3">
+                        <a class="nav-link position-relative" href="carrito.html">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span id="cartCount" class="cart-count position-absolute">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="container mt-4">
@@ -66,7 +83,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-uppercase">SaborFusion</h5>
+                    <h5 class="text-uppercase">Enlaces Rápidos</h5>
                     <ul class="list-unstyled">
                         <li><a href="aboutMe.html" class="text-white-50">Quiénes somos</a></li>
                         <li><a href="catalog.html" class="text-white-50">Catálogo</a></li>

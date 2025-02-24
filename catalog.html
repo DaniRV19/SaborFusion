@@ -6,6 +6,9 @@
     <title>SaborFusion - Catálogo</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
     <header class="bg-dark text-white text-center py-3">
@@ -23,84 +26,349 @@
         <section>
             <h2>Nuestros Productos</h2>
             <div class="row">
+                <!-- Producto 1 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="img/Producto4.JPG" class="mx-auto d-block img-fluid" alt="Producto 1">
+                        <img src="img/Producto1.JPG" class="card-img-top" alt="Producto 1">
                         <div class="card-body">
-                            <h5 class="card-title">Chocolate</h5>
-                            <p class="card-text">Tableta de chocolate con leche.</p>
+                            <h5 class="card-title">Pizza</h5>
+                            <p class="card-text">Pizza italiana de pepperoni.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto1Modal">Ver detalles</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <img src="img/Producto5.JPG" class="mx-auto d-block img-fluid" alt="Producto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Ensalada de frutas</h5>
-                            <p class="card-text">Contiene plátano, pera, kiwi y fresa.</p>
+
+                <!-- Modal Producto 1 -->
+                <div class="modal fade" id="producto1Modal" tabindex="-1" role="dialog" aria-labelledby="producto1ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto1ModalLabel">Chocolate</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Pizza original italiana con masa casera e ingredientes naturales, importados de Italia.</p>
+                                <img src="img/Producto1.JPG" class="img-fluid" alt="Producto 1">
+                                <ul>
+                                    <li>Ingredientes: Masa fresca, tomate, queso y pepperoni.</li>
+                                    <li>Precio: 4,99€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Producto 2 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="img/Producto6.JPG" class="mx-auto d-block img-fluid" alt="Producto 3">
+                        <img src="img/Producto2.JPG" class="card-img-top" alt="Producto 2">
                         <div class="card-body">
-                            <h5 class="card-title">Kebab</h5>
-                            <p class="card-text">Kebab mixto con verduras.</p>
+                            <h5 class="card-title">Tarta de queso</h5>
+                            <p class="card-text">Tarta de queso con mermelada.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto2Modal">Ver detalles</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Producto 2 -->
+                <div class="modal fade" id="producto2Modal" tabindex="-1" role="dialog" aria-labelledby="producto2ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto2ModalLabel">Tarta de queso</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Deliciosa tarta de queso con ingredientes caseros y una pequeña capa de mermelada de fresa.</p>
+                                <img src="img/Producto2.JPG" class="img-fluid" alt="Producto 2">
+                                <ul>
+                                    <li>Ingredientes: Leche, queso, mermelada.</li>
+                                    <li>Precio: 2,99€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="img/Producto7.JPG" class="mx-auto d-block img-fluid" alt="Producto 4">
+                        <img src="img/Producto3.JPG" class="card-img-top" alt="Producto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Hamburguesa</h5>
+                            <p class="card-text">Hamburguesa de ternera completa.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto3Modal">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Producto 3 -->
+                <div class="modal fade" id="producto3Modal" tabindex="-1" role="dialog" aria-labelledby="producto3ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto3ModalLabel">Hamburguesa</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Hamburguesa jugosa de ternera con queso cheddar y verduras.</p>
+                                <img src="img/Producto3.JPG" class="img-fluid" alt="Producto 3">
+                                <ul>
+                                    <li>Ingredientes: Carne de ternera, queso cheddar, tomate y lechuga.</li>
+                                    <li>Precio: 7,49€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 4 -->
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="img/Producto7.JPG" class="card-img-top" alt="Producto 4">
                         <div class="card-body">
                             <h5 class="card-title">Queso</h5>
-                            <p class="card-text">Queso edam.</p>
+                            <p class="card-text">Queso Edam.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto4Modal">Ver detalles</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Producto 4 -->
+                <div class="modal fade" id="producto4Modal" tabindex="-1" role="dialog" aria-labelledby="producto4ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto4ModalLabel">Queso</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Pos yo que sé, es un queso Edam.</p>
+                                <img src="img/Producto7.JPG" class="img-fluid" alt="Producto 3">
+                                <ul>
+                                    <li>Ingredientes: Leche.</li>
+                                    <li>Precio: 10,49€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 5 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="img/Producto8.JPG" class="mx-auto d-block img-fluid" alt="Producto 5">
+                        <img src="img/Producto8.JPG" class="card-img-top" alt="Producto 5">
                         <div class="card-body">
-                            <h5 class="card-title">Filete de ternera</h5>
-                            <p class="card-text">Filete de vaca madurado.</p>
+                            <h5 class="card-title">Chuletón</h5>
+                            <p class="card-text">Chuletón de cerdo ibérico.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto5Modal">Ver detalles</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Producto 5 -->
+                <div class="modal fade" id="producto5Modal" tabindex="-1" role="dialog" aria-labelledby="producto5ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto5ModalLabel">Chuletón</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Chuletón de cerdo ibérico (punto a elegir).</p>
+                                <img src="img/Producto8.JPG" class="img-fluid" alt="Producto 5">
+                                <ul>
+                                    <li>Ingredientes: Carne de cerdo madurada.</li>
+                                    <li>Precio: 15,99€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 6 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="img/Producto9.JPG" class="mx-auto d-block img-fluid" alt="Producto 6">
+                        <img src="img/Producto9.JPG" class="card-img-top" alt="Producto 6">
                         <div class="card-body">
                             <h5 class="card-title">Tortilla de patatas</h5>
-                            <p class="card-text">Tortilla de patatas casera sin cebolla.</p>
+                            <p class="card-text">Jugosa tortilla de patatas.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto6Modal">Ver detalles</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Producto 6 -->
+                <div class="modal fade" id="producto6Modal" tabindex="-1" role="dialog" aria-labelledby="producto6ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto6ModalLabel">Tortilla de patatas</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Jugosa tortilla de patatas con cebolla (punto a elegir).</p>
+                                <img src="img/Producto9.JPG" class="img-fluid" alt="Producto 5">
+                                <ul>
+                                    <li>Ingredientes: Huevos, patatas, cebolla.</li>
+                                    <li>Precio: 6,99€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 7 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="img/Producto10.JPG" class="mx-auto d-block img-fluid" alt="Producto 7">
+                        <img src="img/Producto10.JPG" class="card-img-top" alt="Producto 7">
                         <div class="card-body">
-                            <h5 class="card-title">Croquetas de jamón</h5>
-                            <p class="card-text">Croquetas caserascon jamón de bellota.</p>
+                            <h5 class="card-title">Croquetas</h5>
+                            <p class="card-text">Pack de 10 croquetas de jamón.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto7Modal">Ver detalles</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Producto 7 -->
+                <div class="modal fade" id="producto7Modal" tabindex="-1" role="dialog" aria-labelledby="producto7ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto7ModalLabel">Croquetas</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Cantidad total para 10 croquetas sabor jamón.</p>
+                                <img src="img/Producto10.JPG" class="img-fluid" alt="Producto 7">
+                                <ul>
+                                    <li>Ingredientes: Huevos, harina, jamón, pan rallado, leche.</li>
+                                    <li>Precio: 3,49€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Producto 8 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="img/Producto11.JPG" class="mx-auto d-block img-fluid" alt="Producto 8">
+                        <img src="img/Producto11.JPG" class="card-img-top" alt="Producto 8">
                         <div class="card-body">
-                            <h5 class="card-title">Perrito caliente</h5>
-                            <p class="card-text">Perrito caliente simple.</p>
+                            <h5 class="card-title">Hot Dog</h5>
+                            <p class="card-text">Perritos calientes al estilo americano.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto8Modal">Ver detalles</button>
                         </div>
                     </div>
                 </div>
+
+                <!-- Modal Producto 8 -->
+                <div class="modal fade" id="producto8Modal" tabindex="-1" role="dialog" aria-labelledby="producto8ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto8ModalLabel">Hot Dog</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Perritos calientes con salchicha americana, mostaza y ketchup.</p>
+                                <img src="img/Producto11.JPG" class="img-fluid" alt="Producto 8">
+                                <ul>
+                                    <li>Ingredientes: Pan, salchcha, ketchup, mostaza.</li>
+                                    <li>Precio: 2,09€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- Producto 9 -->
                 <div class="col-md-4">
                     <div class="card mb-4">
-                        <img src="img/Producto12.JPG" class="mx-auto d-block img-fluid" alt="Producto 9">
+                        <img src="img/Producto12.JPG" class="card-img-top" alt="Producto 9">
                         <div class="card-body">
                             <h5 class="card-title">Churros</h5>
-                            <p class="card-text">Churros clásicos.</p>
+                            <p class="card-text">Churros artesanales.</p>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#producto9Modal">Ver detalles</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal Producto 9 -->
+                <div class="modal fade" id="producto9Modal" tabindex="-1" role="dialog" aria-labelledby="producto9ModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="producto9ModalLabel">Churros</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Churros artesanales sabor clásico.</p>
+                                <img src="img/Producto12.JPG" class="img-fluid" alt="Producto 9">
+                                <ul>
+                                    <li>Ingredientes: Huevos, harina, aceite.</li>
+                                    <li>Precio: 4,49€</li>
+                                    <li>Disponible en tienda y online.</li>
+                                </ul>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                <button type="button" class="btn btn-primary">Añadir al carrito</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,7 +379,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-uppercase">SaborFusion</h5>
+                    <h5 class="text-uppercase">Enlaces Rápidos</h5>
                     <ul class="list-unstyled">
                         <li><a href="aboutMe.html" class="text-white-50">Quiénes somos</a></li>
                         <li><a href="catalog.html" class="text-white-50">Catálogo</a></li>
