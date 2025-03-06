@@ -1,181 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-}
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans:wght@400&display=swap');
 
 body {
     font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #35424a;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;  /* Asegura que el contenido esté debajo del header */
-    height: 100vh;
 }
 
 header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
     font-family: 'Poppins', sans-serif;
-    position: fixed; /* Hace que el header se quede fijo en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10; /* Asegura que el header esté por encima de otros elementos */
-}
-
-main {
-    padding: 20px;
-    background-color: #ffffff;
-    color: #35424a;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: 80px; /* Ajusta el margen superior para que no se solape con el header */
-}
-
-h1, h2, h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #3498DB;
-}
-
-button, .btn-primary {
-    background-color: #3498DB;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-button:hover, .btn-primary:hover {
-    background-color: #2C3E50;
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #35424a;
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
-}
-
-.card {
-    background: #fff;
-    padding: 40px; /* Más espacio interno */
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px; /* Hacemos la card más ancha */
-    text-align: center;
-    margin: 0 auto;  /* Centrado horizontal */
-}
-
-.card h2 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.input-container {
-    margin-bottom: 20px;
-}
-
-.input-container label {
-    font-size: 14px;
-    color: #666;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.btn-container {
-    margin-top: 20px;
-    position: relative;
-}
-
-#msg {
-    margin-top: 10px;
-    color: red;
-    font-size: 14px;
-}
-
-button {
-    background-color: #3498DB;
-    border: none;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #35424a;
     color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
 }
 
-button:disabled {
-    background-color: #bbb;
-    cursor: not-allowed;
-}
-
-button:hover {
-    background-color: #2C3E50;
-}
-
-/* Movimiento del botón */
-.shift-left {
-    position: absolute;
-    left: 20px;
-    transition: left 0.3s ease;
-}
-
-.shift-right {
-    position: absolute;
-    right: 20px;
-    transition: right 0.3s ease;
-}
-
-.shift-top {
-    position: absolute;
-    top: 20px;
-    transition: top 0.3s ease;
-}
-
-.shift-bottom {
-    position: absolute;
-    bottom: 20px;
-    transition: bottom 0.3s ease;
-}
-
-.shift-left {
-    position: absolute;
-    left: 20px;
-    transition: left 0.3s ease;
-}
-
-.shift-right {
-    position: absolute;
-    right: 20px;
-    transition: right 0.3s ease;
-}
-
-.shift-top {
-    position: absolute;
-    top: 20px;
-    transition: top 0.3s ease;
-}
-
-.shift-bottom {
-    position: absolute;
-    bottom: 20px;
-    transition: bottom 0.3s ease;
+footer .text-white-50 {
+    opacity: 0.5;
 }
