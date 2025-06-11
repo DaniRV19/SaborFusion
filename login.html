@@ -3,81 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaborFusion - Contacto</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/social.css">
-    <script defer src="/funcionalidad/login.js"></script>
+    <title>SaborFusion - Iniciar Sesión</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3498DB',
+                        secondary: '#2C3E50',
+                        accent: '#f39c12',
+                        dark: '#35424a'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>Bienvenido a SaborFusion</h1>
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="aboutMe.html">Sobre Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="catalog.html">Catálogo</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="login.html">Iniciar sesión</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-secondary to-dark text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <h1 class="text-2xl md:text-3xl font-bold">SaborFusion</h1>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="hover:text-accent transition-colors duration-300 font-semibold">Inicio</a></li>
+                        <li><a href="aboutMe.html" class="hover:text-accent transition-colors duration-300 font-semibold">Sobre Nosotros</a></li>
+                        <li><a href="catalog.html" class="hover:text-accent transition-colors duration-300 font-semibold">Catálogo</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition-colors duration-300 font-semibold">Contacto</a></li>
+                        <li><a href="login.html" class="hover:text-accent transition-colors duration-300 font-semibold border-b-2 border-accent">Iniciar sesión</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block py-2 hover:text-accent transition-colors duration-300">Inicio</a></li>
+                    <li><a href="aboutMe.html" class="block py-2 hover:text-accent transition-colors duration-300">Sobre Nosotros</a></li>
+                    <li><a href="catalog.html" class="block py-2 hover:text-accent transition-colors duration-300">Catálogo</a></li>
+                    <li><a href="contact.html" class="block py-2 hover:text-accent transition-colors duration-300">Contacto</a></li>
+                    <li><a href="login.html" class="block py-2 hover:text-accent transition-colors duration-300">Iniciar sesión</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
-    <main class="container mt-4">
-        <section>
-            <h2 class="section-title">Iniciar Sesión</h2>
-            <p class="text-center">Ingresa tus credenciales para acceder a tu cuenta.</p>
-            <form action="index.html" method="get" class="mx-auto" style="max-width: 600px;">
-                <div class="form-group">
-                    <label for="username">Usuario:</label>
-                    <input type="text" class="form-control" id="username" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" class="form-control" id="password" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
-            </form>
-        </section>
 
-    </main>
-    <footer class="footer bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Enlaces Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="aboutMe.html" class="text-white-50">Quiénes somos</a></li>
-                        <li><a href="catalog.html" class="text-white-50">Catálogo</a></li>
-                        <li><a href="contact.html" class="text-white-50">Contáctanos</a></li>
-                    </ul>
+    <!-- Main Content -->
+    <main class="min-h-screen flex items-center justify-center py-12 px-4">
+        <div class="max-w-md w-full">
+            <!-- Login Card -->
+            <div class="bg-white rounded-xl shadow-2xl p-8">
+                <div class="text-center mb-8">
+                    <div class="bg-primary w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user text-white text-2xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-secondary">Iniciar Sesión</h2>
+                    <p class="text-gray-600 mt-2">Ingresa tus credenciales para acceder a tu cuenta</p>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Atención al Cliente</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50">Preguntas Frecuentes</a></li>
-                        <li><a href="#" class="text-white-50">Términos y Condiciones</a></li>
-                        <li><a href="#" class="text-white-50">Política de Privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Síguenos</h5>
+
+                <form id="loginForm" class="space-y-6">
                     <div>
-                        <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                        <label for="username" class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-user mr-2"></i>Usuario
+                        </label>
+                        <input type="text" id="username" name="username" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                               placeholder="Ingresa tu usuario">
+                    </div>
+                    
+                    <div>
+                        <label for="password" class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-lock mr-2"></i>Contraseña
+                        </label>
+                        <div class="relative">
+                            <input type="password" id="password" name="password" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 pr-12"
+                                   placeholder="Ingresa tu contraseña">
+                            <button type="button" onclick="togglePassword()" 
+                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
+                                <i id="passwordIcon" class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center justify-between">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="rounded border-gray-300 text-primary focus:ring-primary">
+                            <span class="ml-2 text-sm text-gray-600">Recordarme</span>
+                        </label>
+                        <a href="#" class="text-sm text-primary hover:text-blue-600 transition-colors duration-300">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-sign-in-alt mr-2"></i>
+                        Iniciar sesión
+                    </button>
+                </form>
+
+                <div class="mt-6">
+                    <div class="relative">
+                        <div class="absolute inset-0 flex items-center">
+                            <div class="w-full border-t border-gray-300"></div>
+                        </div>
+                        <div class="relative flex justify-center text-sm">
+                            <span class="px-2 bg-white text-gray-500">O continúa con</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 grid grid-cols-2 gap-3">
+                        <button class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors duration-300">
+                            <i class="fab fa-google text-red-500 text-lg"></i>
+                            <span class="ml-2">Google</span>
+                        </button>
+                        <button class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-lg shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 transition-colors duration-300">
+                            <i class="fab fa-facebook text-blue-600 text-lg"></i>
+                            <span class="ml-2">Facebook</span>
+                        </button>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 text-md-end">
-                    <h5 class="text-uppercase">Contacto</h5>
-                    <p class="text-white-50 mb-1"><i class="fas fa-envelope"></i> contacto@saborfusion.com</p>
-                    <p class="text-white-50"><i class="fas fa-phone"></i> +34 123 456 789</p>
+
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-gray-600">
+                        ¿No tienes una cuenta? 
+                        <a href="#" class="text-primary hover:text-blue-600 font-semibold transition-colors duration-300">
+                            Regístrate aquí
+                        </a>
+                    </p>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <p class="text-white-50">&copy; 2025 SaborFusion. Todos los derechos reservados.</p>
+
+            <!-- Features -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                    <i class="fas fa-shopping-cart text-primary text-2xl mb-2"></i>
+                    <p class="text-sm text-gray-600">Historial de pedidos</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                    <i class="fas fa-heart text-primary text-2xl mb-2"></i>
+                    <p class="text-sm text-gray-600">Lista de favoritos</p>
+                </div>
+                <div class="bg-white rounded-lg p-4 shadow-lg text-center">
+                    <i class="fas fa-gift text-primary text-2xl mb-2"></i>
+                    <p class="text-sm text-gray-600">Ofertas exclusivas</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Enlaces Rápidos</h5>
+                    <ul class="space-y-2">
+                        <li><a href="aboutMe.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Quiénes somos</a></li>
+                        <li><a href="catalog.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Catálogo</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Atención al Cliente</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Contacto</h5>
+                    <p class="text-gray-300 mb-2">
+                        <i class="fas fa-envelope mr-2"></i>
+                        contacto@saborfusion.com
+                    </p>
+                    <p class="text-gray-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        +34 123 456 789
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 SaborFusion. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const passwordIcon = document.getElementById('passwordIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordIcon.classList.remove('fa-eye');
+                passwordIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                passwordIcon.classList.remove('fa-eye-slash');
+                passwordIcon.classList.add('fa-eye');
+            }
+        }
+
+        // Login form handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Simple validation (in a real app, this would be handled server-side)
+            if (username && password) {
+                // Simulate successful login
+                alert('¡Inicio de sesión exitoso! Redirigiendo...');
+                window.location.href = 'index.html';
+            } else {
+                alert('Por favor, completa todos los campos.');
+            }
+        });
+    </script>
 </body>
 </html>

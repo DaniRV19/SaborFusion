@@ -4,101 +4,275 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SaborFusion - Contacto</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/social.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3498DB',
+                        secondary: '#2C3E50',
+                        accent: '#f39c12',
+                        dark: '#35424a'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header class="bg-dark text-white text-center py-3">
-        <h1>Bienvenido a SaborFusion</h1>
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="aboutMe.html">Sobre Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="catalog.html">Catálogo</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="login.html">Iniciar sesión</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-secondary to-dark text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <h1 class="text-2xl md:text-3xl font-bold">SaborFusion</h1>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="index.html" class="hover:text-accent transition-colors duration-300 font-semibold">Inicio</a></li>
+                        <li><a href="aboutMe.html" class="hover:text-accent transition-colors duration-300 font-semibold">Sobre Nosotros</a></li>
+                        <li><a href="catalog.html" class="hover:text-accent transition-colors duration-300 font-semibold">Catálogo</a></li>
+                        <li><a href="contact.html" class="hover:text-accent transition-colors duration-300 font-semibold border-b-2 border-accent">Contacto</a></li>
+                        <li><a href="login.html" class="hover:text-accent transition-colors duration-300 font-semibold">Iniciar sesión</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="block py-2 hover:text-accent transition-colors duration-300">Inicio</a></li>
+                    <li><a href="aboutMe.html" class="block py-2 hover:text-accent transition-colors duration-300">Sobre Nosotros</a></li>
+                    <li><a href="catalog.html" class="block py-2 hover:text-accent transition-colors duration-300">Catálogo</a></li>
+                    <li><a href="contact.html" class="block py-2 hover:text-accent transition-colors duration-300">Contacto</a></li>
+                    <li><a href="login.html" class="block py-2 hover:text-accent transition-colors duration-300">Iniciar sesión</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
-    <main class="container mt-4">
-        <section>
-            <h2 class="section-title">Contáctame</h2>
-            <p class="text-center">Si tienes preguntas o comentarios, no dudes en escribirme. Estoy aquí para ayudarte.</p>
-            <form action="index.html" method="get" class="mx-auto" style="max-width: 600px;">
-                <div class="form-group">
-                    <label for="name">Nombre:</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" class="form-control" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mensaje:</label>
-                    <textarea class="form-control" id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </section>
 
-        <section class="mt-5">
-            <h3 class="section-title">Ubicación</h3>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.8220791120796!2d-5.984930749999999!3d37.38476427948939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126d0d05b56835!2sNervi%C3%B3n%20Plaza!5e0!3m2!1ses!2ses!4v1706972023150" width="80%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="relative h-64 bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="relative z-10 text-center px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Contáctanos</h2>
+            <p class="text-xl">Estamos aquí para ayudarte</p>
+        </div>
+    </section>
 
-        <section class="mt-5">
-            <h3 class="section-title">Síguenos en Redes Sociales</h3>
-            <div class="social-container">
-                <div class="social-icons">
-                    <a href="#" class="mx-2"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="mx-2"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="mx-2"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="mx-2"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Enlaces Rápidos</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="aboutMe.html" class="text-white-50">Quiénes somos</a></li>
-                        <li><a href="catalog.html" class="text-white-50">Catálogo</a></li>
-                        <li><a href="contact.html" class="text-white-50">Contáctanos</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Atención al Cliente</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50">Preguntas Frecuentes</a></li>
-                        <li><a href="#" class="text-white-50">Términos y Condiciones</a></li>
-                        <li><a href="#" class="text-white-50">Política de Privacidad</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="text-uppercase">Síguenos</h5>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Contact Form -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-secondary mb-6">Envíanos un mensaje</h3>
+                <p class="text-gray-600 mb-8">Si tienes preguntas o comentarios, no dudes en escribirnos. Estamos aquí para ayudarte.</p>
+                
+                <form id="contactForm" class="space-y-6">
                     <div>
-                        <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                        <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Nombre completo</label>
+                        <input type="text" id="name" name="name" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">Asunto</label>
+                        <select id="subject" name="subject" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300">
+                            <option value="">Selecciona un asunto</option>
+                            <option value="consulta">Consulta general</option>
+                            <option value="pedido">Información sobre pedidos</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="queja">Queja o reclamo</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required 
+                                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"></textarea>
+                    </div>
+                    
+                    <button type="submit" 
+                            class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Enviar mensaje
+                    </button>
+                </form>
+                
+                <div id="formMessage" class="hidden mt-4 p-4 rounded-lg"></div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="space-y-8">
+                <!-- Contact Details -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Información de contacto</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-700">Email</p>
+                                <p class="text-gray-600">contacto@saborfusion.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-700">Teléfono</p>
+                                <p class="text-gray-600">+34 123 456 789</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-700">Dirección</p>
+                                <p class="text-gray-600">Nervión Plaza, Sevilla, España</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-700">Horario de atención</p>
+                                <p class="text-gray-600">Lun - Vie: 9:00 - 18:00</p>
+                                <p class="text-gray-600">Sáb: 10:00 - 14:00</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 text-md-end">
-                    <h5 class="text-uppercase">Contacto</h5>
-                    <p class="text-white-50 mb-1"><i class="fas fa-envelope"></i> contacto@saborfusion.com</p>
-                    <p class="text-white-50"><i class="fas fa-phone"></i> +34 123 456 789</p>
+
+                <!-- Map -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Nuestra ubicación</h3>
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.8220791120796!2d-5.984930749999999!3d37.38476427948939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126d0d05b56835!2sNervi%C3%B3n%20Plaza!5e0!3m2!1ses!2ses!4v1706972023150" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            class="rounded-lg">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="bg-white rounded-xl shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Síguenos en redes sociales</h3>
+                    <div class="flex justify-center space-x-6">
+                        <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-pink-600 hover:bg-pink-700 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-blue-400 hover:bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-blue-800 hover:bg-blue-900 text-white w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <p class="text-white-50">&copy; 2025 SaborFusion. Todos los derechos reservados.</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Enlaces Rápidos</h5>
+                    <ul class="space-y-2">
+                        <li><a href="aboutMe.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Quiénes somos</a></li>
+                        <li><a href="catalog.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Catálogo</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-accent transition-colors duration-300">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Atención al Cliente</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Preguntas Frecuentes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Términos y Condiciones</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 text-xl">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-accent transition-colors duration-300 text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="text-lg font-bold mb-4">Contacto</h5>
+                    <p class="text-gray-300 mb-2">
+                        <i class="fas fa-envelope mr-2"></i>
+                        contacto@saborfusion.com
+                    </p>
+                    <p class="text-gray-300">
+                        <i class="fas fa-phone mr-2"></i>
+                        +34 123 456 789
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 SaborFusion. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('formMessage');
+            formMessage.className = 'mt-4 p-4 rounded-lg bg-green-100 border border-green-400 text-green-700';
+            formMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i>¡Mensaje enviado correctamente! Te responderemos pronto.';
+            formMessage.classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
