@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script defer src="assets/main.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <script>
         tailwind.config = {
             theme: {
@@ -34,7 +35,6 @@
                         <li><a href="aboutMe.html" class="hover:text-accent transition-colors duration-300 font-semibold">Sobre Nosotros</a></li>
                         <li><a href="catalog.html" class="hover:text-accent transition-colors duration-300 font-semibold border-b-2 border-accent">Catálogo</a></li>
                         <li><a href="contact.html" class="hover:text-accent transition-colors duration-300 font-semibold">Contacto</a></li>
-                        <li><a href="login.html" class="hover:text-accent transition-colors duration-300 font-semibold">Iniciar sesión</a></li>
                     </ul>
                 </nav>
                 <button class="md:hidden text-white" onclick="toggleMobileMenu()">
@@ -414,63 +414,63 @@
         const productData = {
             pizza: {
                 title: 'Pizza',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto1.JPG',
                 description: 'Pizza original italiana con masa casera e ingredientes naturales, importados directamente de Italia.',
                 details: ['Ingredientes: Masa fresca, tomate, queso y pepperoni', 'Disponible en tienda y online', 'Tiempo de preparación: 15 minutos'],
                 price: '€4.99'
             },
             tarta: {
                 title: 'Tarta de queso',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto2.JPG',
                 description: 'Deliciosa tarta de queso con ingredientes caseros y una pequeña capa de mermelada de fresa.',
                 details: ['Ingredientes: Leche, queso, mermelada', 'Disponible en tienda y online', 'Sin conservantes artificiales'],
                 price: '€2.99'
             },
             hamburguesa: {
                 title: 'Hamburguesa',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto3.JPG',
                 description: 'Hamburguesa jugosa de ternera con queso cheddar y verduras frescas.',
                 details: ['Ingredientes: Carne de ternera, queso cheddar, tomate y lechuga', 'Disponible en tienda y online', 'Carne 100% ternera'],
                 price: '€7.49'
             },
             queso: {
                 title: 'Queso Edam',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto7.JPG',
                 description: 'Queso Edam premium de la mejor calidad, perfecto para cualquier ocasión.',
                 details: ['Ingredientes: Leche pasteurizada', 'Disponible en tienda y online', 'Madurado 6 meses'],
                 price: '€10.49'
             },
             chuleton: {
                 title: 'Chuletón',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto8.JPG',
                 description: 'Chuletón de cerdo ibérico madurado, punto a elegir.',
                 details: ['Ingredientes: Carne de cerdo madurada', 'Disponible en tienda y online', 'Punto de cocción a elegir'],
                 price: '€15.99'
             },
             tortilla: {
                 title: 'Tortilla de patatas',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto9.JPG',
                 description: 'Jugosa tortilla de patatas con cebolla, punto a elegir.',
                 details: ['Ingredientes: Huevos, patatas, cebolla', 'Disponible en tienda y online', 'Receta tradicional española'],
                 price: '€6.99'
             },
             croquetas: {
                 title: 'Croquetas',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto10.JPG',
                 description: 'Pack de 10 croquetas de jamón artesanales.',
                 details: ['Ingredientes: Huevos, harina, jamón, pan rallado, leche', 'Disponible en tienda y online', '10 unidades por pack'],
                 price: '€3.49'
             },
             hotdog: {
                 title: 'Hot Dog',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto11.JPG',
                 description: 'Perritos calientes al estilo americano con salchicha premium.',
                 details: ['Ingredientes: Pan, salchicha, ketchup, mostaza', 'Disponible en tienda y online', 'Estilo americano auténtico'],
                 price: '€2.09'
             },
             churros: {
                 title: 'Churros',
-                image: '/placeholder.svg?height=300&width=400',
+                image: 'img/Producto12.JPG',
                 description: 'Churros artesanales sabor clásico, recién hechos.',
                 details: ['Ingredientes: Huevos, harina, aceite', 'Disponible en tienda y online', 'Recién hechos diariamente'],
                 price: '€4.49'
