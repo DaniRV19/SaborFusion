@@ -1,8 +1,30 @@
-Mejora del logo, navegabilidad y footer completo. 
+# 🍜 SaborFusion
 
-Leyes de UX/UI: 
+Tienda online de productos alimenticios en polvo que, al añadir agua, se transforman en el producto representado en su envase.
 
--Ley de Fitts: Si tienes un botón pequeño en una parte de la pantalla difícil de alcanzar (por ejemplo, en una esquina superior), los usuarios tardarán más en hacer clic en él, incluso si saben qué hacer. En cambio, si el botón es más grande y está colocado en una zona más accesible, como en el centro de la página o en la parte inferior, los usuarios pueden hacer clic más rápidamente.
--Ley de Miller: Los usuarios solo pueden procesar una cantidad limitada de información a la vez. En el diseño web, esto implica que las páginas no deben estar sobrecargadas con demasiada información en una sola pantalla. Las listas de opciones, menús y formularios deben limitarse a un número razonable de elementos (idealmente entre 5 y 9) para evitar sobrecargar al usuario y asegurar que la información sea fácilmente asimilable.
--Efecto de posición en serie: En el diseño de una página web, es ideal colocar la información más importante o llamada a la acción al principio y al final de la página, asegurando que los usuarios la vean y recuerden fácilmente.
--Ley de Tesler: Los diseñadores web deben simplificar la experiencia tanto como sea posible, evitando interfaces llenas de pasos innecesarios o formularios complejos que obliguen al usuario a hacer demasiado trabajo.
+El proyecto combina una propuesta de producto innovadora con una **experiencia de compra completamente desarrollada en frontend**, simulando el funcionamiento de una tienda online sin necesidad de un backend o base de datos.
+
+## ✨ Funcionalidades
+
+- 🛍️ Catálogo de productos.
+- 🔎 Visualización de productos y sus características.
+- 🛒 Carrito de compra.
+- ➕ Gestión de cantidades y productos.
+- 💾 Persistencia del carrito mediante `localStorage`.
+- 📦 Simulación del proceso de compra.
+- 📱 Diseño responsive.
+- 🎨 Interfaz visual orientada a la experiencia de usuario.
+
+## 🛠️ Tecnologías
+
+`HTML` · `CSS` · `JavaScript` · `LocalStorage`
+
+## 🎯 Objetivo
+
+Desarrollar una **tienda online funcional desde el frontend**, creando una experiencia de compra completa sin utilizar una base de datos ni un backend.
+
+El proyecto permite trabajar con la gestión dinámica de productos, estado de la aplicación, carrito de compra y persistencia de datos en el navegador mediante `localStorage`.
+
+## 💡 Enfoque técnico
+
+SaborFusion está desarrollado íntegramente en el lado del cliente. Los datos y el estado de la aplicación se gestionan mediante **JavaScript y LocalStorage**, permitiendo conservar la información del carrito entre sesiones sin depender de un servidor o una base de datos.
